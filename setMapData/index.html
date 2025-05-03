@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    Image: 
+    <input type="file" accept="image/*" id="imgInp">
+    Load JSON: 
+    <input type="file" accept=".json" id="fileInp">
+    Set/Reset image: 
+    <input type="button" value="Set image" id="btn">
+    Set square size:
+    <input type="number" id="squareSize" value="200">
+    Auto id set:
+    <input type="checkbox" id="autoId">
+    Id start from:
+    <input type="number" id="idStart" disabled>
+
+    Floor id: 
+    <input type="text" id="fileId">
+    Floor name: 
+    <input type="text" id="textInp">
+    Keep name & id: 
+    <input type="checkbox" id="check">
+    <input type="button" value="Save data" id="save"  onclick="exportToJsonFile()">
+    <h3 id="choice">null(1)</h3>
+    <div id="container">
+        <img src="#" id="image" class="overlap">
+        <div id="nodes" class="overlap"></div>
+    </div>
+    
+    <script src="astar.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
